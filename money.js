@@ -1,7 +1,7 @@
 function checkRate(rate){
-	var threshold = 1.00;
+	var threshold = 1.15;
 	if(rate >= threshold){
-		return true;
+		return rate;
 	}
 	else {
 		return false;
