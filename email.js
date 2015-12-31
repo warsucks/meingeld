@@ -23,11 +23,11 @@ function sendEmailAlert(subject, htmlMessage){
 	var error = function(err){
 		console.error("Error: ",err.message);
 	};
-	mandrillClient.message.send(message, success, error);
+	mandrillClient.messages.send({message: message}, success, error);
 }
 
 function sendExchangeRateEmailAlert(rate){
-	var subject = "<p>The EUR/USD exchange rate is good today! 1 EUR = "+rate+" USD</p>";
+	var subject = "EUR/USD exchange rate is good today! 1 EUR = "+rate+" USD";
 	return sendEmailAlert(subject);
 }
 
