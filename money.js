@@ -1,5 +1,5 @@
 function checkRate(rate){
-	var threshold = 1.15;
+	var threshold = 1.0;
 	if(rate >= threshold){
 		return rate;
 	}

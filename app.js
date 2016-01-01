@@ -19,6 +19,8 @@ var job = schedule.scheduleJob('0 6 * * *', function(){
 
 app.use('/', require('./router'));
 
-app.listen(80, function(){
-	console.log("listening on port 80");
+var PORT = process.env.PORT || 1337;
+
+app.listen(PORT, function(){
+	console.log("listening on port", PORT);
 });
